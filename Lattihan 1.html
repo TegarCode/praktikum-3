@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Latihan 1</title>
+</head>
+<script language="Javascript">
+   /* function untuk kondisi pada bilangan konversi */
+     function pesan() {
+                alert("Angka harus lebih besar dari 0 atau lebih kecil dari 100")
+            }
+    function konversi() {
+        var con = document.kirim.T1.value
+        /* jika bilangan lebih dari 0 dan kurang dari samadengan 40 */
+        if (con > 0 && con <= 40) {
+            document.kirim.T2.value = "E"
+        }
+        /* jika bilangan lebih dari 40 dan kurang dari samadengan 55 */
+        else if (40 < con && con <= 55) {
+            document.kirim.T2.value = "D"
+        }
+        /* jika bilangan lebih dari 55 dan kurang dari samadengan 60 */
+        else if (55 < con && con <= 60) {
+            document.kirim.T2.value = "C"
+        }
+        /* jika bilangan lebih dari 60 dan kurang dari samadengan 65 */
+        else if (60 < con && con <= 65) {
+            document.kirim.T2.value = "BC"
+        }
+        /* jika bilangan lebih dari 65 dan kurang dari samadengan 70 */
+        else if (65 < con && con <= 70) {
+            document.kirim.T2.value = "B"
+        }
+        /* jika bilangan lebih dari 70 dan kurang dari samadengan 80 */
+        else if (70 < con && con <= 80) {
+            document.kirim.T2.value = "AB"
+        }
+        /* jika bilangan lebih dari 80 dan kurang dari samadengan 100 */
+        else if (80 < con && con <= 100) {
+            document.kirim.T2.value = "A"
+        }
+        /* kondisi jika semua kemungkinan di atas tidak terpenuhi  */
+        else {
+            onload=pesan()
+            document.kirim.reset()
+        }
+
+    }
+</script>
+ <!-- bagian body berisi tampilan dan interaksi langsung-->
+<body>
+
+    <form method="POST" name="kirim">
+        <p>BIL <input type="text" name="T1" size="20"> konversi huruf = <input type="text" name="T2" size="20"></p>
+
+        <p><input type="button" value="KONVERSI" name="B1" onclick=konversi()></p>
+    </form>
+
+</html>
