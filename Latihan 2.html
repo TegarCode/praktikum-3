@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <title>Kalkulator Sederhana</title>
+    <style text="text/css">
+        /* CSS untuk tampilan program */
+        form {
+            border: 1px solid blue;
+            background-color: lightblue;
+            margin-left: 480px;
+            margin-right: 440px;
+            margin-top: 120px;
+
+        }
+
+        p.row3 {
+            margin-left: 20px;
+        }
+       
+        p.row1 {
+            margin-left: 70px;
+
+        }
+
+        p.row2 {
+            margin-top: -13px;
+            margin-left: 70px;
+        }
+
+        .button {
+            border: 2px solid aqua;
+            color: rgb(39, 36, 36);
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: aqua;
+            color: white;
+        }
+
+        .b1,.b2,.b3,.b4 {
+            background-color: white;
+        }
+
+    </style>
+</head>
+<script language="Javascript">
+    /* function untuk masing masing oprasi di letakkan pada tombol*/
+    function Penjumlahan() {
+        var con1 = parseInt(document.kirim.T1.value)
+        var con2 = parseInt(document.kirim.T2.value)
+        hasil = con1 + con2
+        document.kirim.T3.value = hasil
+    }
+    function Pengurangan() {
+        var con1 = parseInt(document.kirim.T1.value)
+        var con2 = parseInt(document.kirim.T2.value)
+        hasil = con1 - con2
+        document.kirim.T3.value = hasil
+    }
+    function Perkalian() {
+        var con1 = parseInt(document.kirim.T1.value)
+        var con2 = parseInt(document.kirim.T2.value)
+        hasil = con1 * con2
+        document.kirim.T3.value = hasil
+    }
+    function Pembagian() {
+        var con1 = parseInt(document.kirim.T1.value)
+        var con2 = parseInt(document.kirim.T2.value)
+        hasil = con1 / con2
+        document.kirim.T3.value = hasil
+    }
+</script>
+
+<body>
+    <!-- bagian body berisi tampilan kalkulator-->
+    <form method="POST" name="kirim">
+        <div class="badan">
+            <!--Terbagi menjadi 3 row untuk mempermudah mendesain tombol-->
+            <p class="row3">Bilangan 1 <input type="text" name="T1" size="20"><br><br>
+                Bilangan 2 <input type="text" name="T2" size="20"><br><br>hasil  <input type="text" name="T3"
+                    size="20"> <input class="b4" type="button" value="AC" name="B4" onclick= document.kirim.reset()></p>
+            <p class="row1"><input class="button b1" type="button" value="+" name="B1" onclick=Penjumlahan()> <input
+                    class="button b2" type="button" value="-" name="B2" onclick=Pengurangan()></p>
+            <p class="row2"><input class="button b3" type="button" value="x" name="B3" onclick=Perkalian()> <input
+                    class="button b3" type="button" value=":" name="B4" onclick=Pembagian()> </p>
+            
+        </div>
+     <!--Last modify-->   
+    <script langauge="JavaScript">
+        document.write("Dimodifikasi terakhir pada" + document.lastModified);
+    </script>
+    </form>
+
+
+</body>
+
+</html>
